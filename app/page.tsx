@@ -22,7 +22,7 @@ export default function Home() {
           loop
           id="myVideo"
         >
-          <source src="/home.mp4" type="video/mp4" />
+          <source src="./home.mp4" type="video/mp4" />
         </video>
         <div
           style={{
@@ -51,7 +51,7 @@ export default function Home() {
               data-aos="zoom-out"
               data-aos-delay="100"
             >
-              <img src="/hero-img.png" className="img-fluid animated" alt="" />
+              <img src="./hero-img.png" className="img-fluid animated" alt="" />
             </div>
           </div>
           <div className="lg:w-1/2 p-4">
