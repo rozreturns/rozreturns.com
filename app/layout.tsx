@@ -17,12 +17,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="night">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Copperplate&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body className="font-lato">
         <StarsBackground />
         <div className="relative z-10">
