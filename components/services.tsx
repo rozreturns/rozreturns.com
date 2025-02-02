@@ -7,7 +7,7 @@ export function TabsDemo() {
   const tabsList = [
     {
       name: "Machine Learning",
-      src: "/ml.jpg",
+      src: "./ml.jpg",
       description: (
         <p className="text-left">
           Technology is at the heart of everything we do.{" "}
@@ -30,7 +30,7 @@ export function TabsDemo() {
     },
     {
       name: "Problem Solving",
-      src: "/problemSolving.png",
+      src: "./problemSolving.png",
       description: (
         <p className="text-left">
           Our team at RozReturns thrives on solving complex financial problems
@@ -53,7 +53,7 @@ export function TabsDemo() {
     },
     {
       name: "Markets",
-      src: "/markets.png",
+      src: "./markets.png",
       description: (
         <div className="text-left">
           <p className="text-xl text-white

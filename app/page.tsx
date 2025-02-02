@@ -60,7 +60,7 @@ export default function Home() {
               <Image
                 width={500}
                 height={500}
-                src="/hero-img.png"
+                src="./hero-img.png"
                 className="img-fluid animated"
                 alt=""
               />
