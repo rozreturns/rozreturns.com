@@ -51,6 +51,9 @@ export default {
           "5": "hsl(var(--chart-5))",
         },
       },
+      fontFamily: {
+        lato: ["Lato", "sans-serif"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -60,6 +63,6 @@ export default {
   },
   plugins: [require("tailwindcss-animate"), require("daisyui")],
   daisyui: {
-    themes: ["light", "dark", "cupcake", "autumn"],
+    themes: ["night"],
   },
 } satisfies Config;

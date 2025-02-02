@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 type Tab = {
   title: string;
   value: string;
+  description: React.ReactNode;
   content?: string | React.ReactNode;
 };
 
@@ -38,48 +39,51 @@ export const Tabs = ({
 
   return (
     <>
-      <div
-        className={cn(
-          "flex flex-row md:flex-col  items-center justify-center text-start [perspective:1000px] relative  sm:overflow-visible no-visible-scrollbar max-w-full w-full",
-          containerClassName
-        )}
-      >
-        {propTabs.map((tab, idx) => (
-          <button
-            key={tab.title}
-            onClick={() => {
-              moveSelectedTabToTop(idx);
-            }}
-            // onMouseEnter={() => setHovering(true)}
-            // onMouseLeave={() => setHovering(false)}
-            className={cn("relative px-4 py-2 rounded-full", tabClassName)}
-            style={{
-              transformStyle: "preserve-3d",
-            }}
-          >
-            {active.value === tab.value && (
-              <motion.div
-                layoutId="clickedbutton"
-                transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
-                className={cn(
-                  "absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full ",
-                  activeTabClassName
-                )}
-              />
-            )}
+      <div className="flex flex-col text-center mb-12 lg:w-3/4 gap-6 mt-7 pr-8">
+        <div
+          className={cn(
+            "flex flex-row items-center justify-center text-start [perspective:1000px] relative  sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+            containerClassName
+          )}
+        >
+          {propTabs.map((tab, idx) => (
+            <button
+              key={tab.title}
+              onClick={() => {
+                moveSelectedTabToTop(idx);
+              }}
+              className={cn(
+                "relative px-4 py-2 rounded-full text-white",
+                tabClassName
+              )}
+              style={{
+                transformStyle: "preserve-3d",
+              }}
+            >
+              {active.value === tab.value && (
+                <motion.div
+                  layoutId="clickedbutton"
+                  transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
+                  className={cn(
+                    "absolute inset-0 bg-gray-700  rounded-full ",
+                    activeTabClassName
+                  )}
+                />
+              )}
 
-            <span className="relative block text-black dark:text-white">
-              {tab.title}
-            </span>
-          </button>
-        ))}
+              <span className="relative block">{tab.title}</span>
+            </button>
+          ))}
+        </div>
+        {active.description}
       </div>
+
       <FadeInDiv
         tabs={tabs}
         active={active}
         key={active.value}
         hovering={true}
-        className={cn("mt-32", contentClassName)}
+        className={cn("lg:-mt-16 max-w-3xl", contentClassName)}
       />
     </>
   );
@@ -100,7 +104,7 @@ export const FadeInDiv = ({
     return tab.value === tabs[0].value;
   };
   return (
-    <div className="relative w-full h-full ">
+    <div className="relative w-full lg:w-1/2">
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}
@@ -114,7 +118,7 @@ export const FadeInDiv = ({
           animate={{
             y: isActive(tab) ? [0, 40, 0] : 0,
           }}
-          className={cn("w-full h-full absolute top-0 left-0", className)}
+          className={cn("w-full absolute top-0 left-0", className)}
         >
           {tab.content}
         </motion.div>

@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <div className="navbar  bg-slate-200 sticky top-0 z-[1000] shadow-lg lg:w-3/4 lg:mx-auto lg:mt-3 lg:rounded-box ">
+    <div className="navbar text-white font-bold bg-gray-800 sticky top-0 z-[1000] shadow-lg lg:w-3/4 lg:mx-auto lg:mt-3 lg:rounded-box ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,13 +24,13 @@ export default function Navbar() {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Home</a>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <a>About Us</a>
+              <a href="#about">About Us</a>
             </li>
             <li>
-              <a>Team</a>
+              <a href="#team">Team</a>
             </li>
           </ul>
         </div>
