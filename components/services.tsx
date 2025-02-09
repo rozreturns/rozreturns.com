@@ -51,20 +51,21 @@ export function TabsDemo() {
         </p>
       ),
     },
-    {
-      name: "Markets",
-      src: "./markets.png",
-      description: (
-        <div className="text-left">
-          <p className="text-xl text-white
-          ">Currently we work on</p>
-          <ul className="mt-2 pl-3">
-            <li className="list-disc">Crypto (Binance, OKX)</li>
-            <li className="list-disc">Indian Equity and Derivatives(NSE)</li>
-          </ul>
-        </div>
-      ),
-    },
+    // {
+    //   name: "Consistent Returns",
+    //   src: "/markets.png",
+    //   description: (
+    //     <div className="text-left">
+    //       {/* <p className="text-xl text-white
+    //       ">Currently we work on</p> */}
+    //       {/* <ul className="mt-2 pl-3">
+    //         <li className="list-disc">Crypto (Binance, OKX)</li>
+    //         <li className="list-disc">Indian Equity and Derivatives(NSE)</li>
+    //       </ul> */}
+    //       <p></p>
+    //     </div>
+    //   ),
+    // },
   ];
 
   const tabs = tabsList.map((tab) => {

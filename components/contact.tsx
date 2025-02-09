@@ -203,7 +203,7 @@ export function ContactForm() {
       className="flex flex-col lg:flex-row items-center justify-center pb-16"
     >
       <div className="text-center mb-8">
-        <h1 className="font-bold text-3xl justify-start w-full text-left text-gray-100">
+        <h1 className="font-bold text-3xl justify-start w-full text-left text-gray-100 nova-square-regular">
           Get in touch
         </h1>
         <p className="italic text-gray-300 mt-2 max-w-md text-left">
@@ -214,7 +214,7 @@ export function ContactForm() {
         </p>
       </div>
 
-      <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-gray-800">
+      <div className="max-w-md w-full mx-auto p-4 md:p-8 shadow-input bg-black border border-gray-300">
         <form
           className="my-8 gform"
           method="POST"

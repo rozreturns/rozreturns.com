@@ -29,8 +29,12 @@ html {
 }
 
 @keyframes animStar {
-  from { transform: translateY(0); }
-  to { transform: translateY(-200vh); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200vh);
+  }
 }
 
 .star-layer {
@@ -67,10 +71,53 @@ html {
 }
 
 body {
-  background: linear-gradient(to bottom, #0a1931, #1a365d);
+  background: black;
   overflow-x: hidden;
 }
 
+/* .turret-road {
+  font-family: "Turret Road", serif;
+  font-weight: 600;
+  font-style: normal;
+} */
+
+.nova-square-only {
+  font-family: "Nova Square", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nova-square-regular {
+  font-family: "Nova Square", serif;
+  font-weight: 400;
+  font-style: normal;
+  background: linear-gradient(
+    0deg,
+    rgb(76, 74, 108) 0%,
+    rgb(110, 110, 203) 37%,
+    rgb(133, 170, 178) 76%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* font-weight: bold; */
+}
+.nova-square-footer {
+  font-size: 1.1rem;
+  font-family: "Nova Square", serif;
+  font-weight: 400;
+  font-style: normal;
+  background: linear-gradient(
+    0deg,
+    rgb(199, 198, 213) 0%,
+    rgb(144, 144, 240) 37%,
+    rgb(109, 213, 236) 76%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* font-weight: bold; */
+}
 
 @layer base {
   * {

@@ -34,7 +34,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl hover:bg-inherit">rozReturns</a>
+        <a className="btn btn-ghost text-xl hover:bg-inherit">RozReturns</a>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

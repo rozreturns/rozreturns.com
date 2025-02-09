@@ -8,6 +8,7 @@ import { useCallback, useEffect, useState } from "react";
 type Testimonial = {
   quote: string;
   name: string;
+  email: string;
   designation: string;
   src: string;
 };
@@ -149,6 +150,12 @@ export const AnimatedTestimonials = ({
                 </motion.span>
               ))}
             </motion.p>
+            <p className="font-bold text-white mt-4">
+              Contact: &nbsp;
+              <a className="mt-2" href={`mailto:${testimonials[active].email}`}>
+                {testimonials[active].email}
+              </a>
+            </p>
           </motion.div>
           <div className="flex gap-4 pt-3 mt-5 md:pt-0">
             <button

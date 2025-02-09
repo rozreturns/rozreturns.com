@@ -35,22 +35,31 @@ export const TextGenerateEffect = ({
         {sentences.map((sentence, id) => {
           const wordsArray = sentence.split(" ");
           return (
-            <div key={id}>
+            <div key={id} className="nova-square-only">
               {wordsArray.map((word, idx) => {
                 return (
                   <motion.span
                     key={word + idx}
                     className="opacity-0"
+                    // style={{
+                    //   filter: filter ? "blur(10px)" : "none",
+                    //   color:
+                    //     id == 1
+                    //       ? "red"
+                    //       : id == 2
+                    //       ? "green"
+                    //       : id == 3
+                    //       ? "gold"
+                    //       : "white",
+                    // }}
                     style={{
-                      filter: filter ? "blur(10px)" : "none",
                       color:
-                        id == 1
-                          ? "red"
-                          : id == 2
-                          ? "green"
-                          : id == 3
-                          ? "gold"
-                          : "white",
+                        id === 0
+                          ? "#00FFAB" // Neon Green (high contrast)
+                          : id === 1
+                          ? "#1E90FF" // Dodger Blue
+                          : "#EBEBEB", // Soft White (87% opacity)
+                      filter: filter ? "blur(10px)" : "none",
                     }}
                   >
                     {word}{" "}
@@ -68,6 +77,9 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
+        <div className="leading-snug text-cyan-200 font-mono tracking-wide nova-square-only">
+          Redefining global trading with Intelligence & Technology
+        </div>
         <div className="leading-snug text-white font-mono tracking-wide">
           {renderWords()}
         </div>

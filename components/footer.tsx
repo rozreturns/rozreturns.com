@@ -1,13 +1,13 @@
 import Image from "next/image";
 export default function Footer() {
   return (
-    <footer className="footer bg-neutral text-neutral-content p-10">
+    <footer className="footer bg-black text-neutral-content p-10">
       <aside>
         <Image
           width="200"
           height="200"
-          alt="rozReturnes"
-          src="./rozReturns.png"
+          alt="RozReturnes"
+          src="/rozReturns.png"
         />
         <p className="footer-title pl-5 w-[200px] ">
           Roz Returns
@@ -16,28 +16,24 @@ export default function Footer() {
       </aside>
       <nav className="flex w-full justify-evenly lg:flex-row">
         <div>
-          <h6 className="footer-title">Contact</h6>
+          <h6 className="footer-title nova-square-footer">Contact</h6>
           <div className="flex flex-col gap-1">
             <p className="text-white">You can reach out to us at:</p>
-            <a href="mailto:deepankur@rozreturns.com">
-              deepankur@rozreturns.com
-            </a>
-            <a href="mailto:ayush@rozreturns.com">ayush@rozreturns.com</a>
+            <a href="rozreturns@gmail.com">rozreturns@gmail.com</a>
           </div>
         </div>
         <div>
-          <h6 className="footer-title">Links</h6>
+          <h6 className="footer-title nova-square-footer">Links</h6>
           <div className="flex flex-col gap-1">
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#services">Markets</a>
             <a href="#contactUs">Contact</a>
           </div>
         </div>
 
         <div>
           {" "}
-          <h6 className="footer-title">Social</h6>
+          <h6 className="footer-title nova-square-footer">Social</h6>
           <div className="grid grid-flow-col gap-4">
             <a
               href="https://www.linkedin.com/company/rozreturns"

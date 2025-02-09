@@ -2,46 +2,28 @@ import { HoverEffect } from "./ui/card-hover-effect";
 
 export const projects = [
   {
-    title: "Stripe",
+    title: "8 M Variables",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "Advanced models analyze over 1.8 million variables daily for unparalleled precision.",
+    // link: "https://stripe.com",
   },
   {
-    title: "Netflix",
+    title: "Just 2 Hours",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+      "Seamless and efficient pipeline ensures strategies are deployed within 2 hours.",
+    // link: "https://netflix.com",
   },
   {
-    title: "Google",
+    title: "Diversified portfolio",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
-  },
-  {
-    title: "Meta",
-    description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
-  },
-  {
-    title: "Amazon",
-    description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
-  },
-  {
-    title: "Microsoft",
-    description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
+      "Portfolio spanning five distinct financial products for optimized returns.",
+    // link: "https://google.com",
   },
 ];
 
-export default function Markets() {
+export default function Advantages() {
   return (
-    <div className="max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
+    <div className="max-w-4xl mx-auto antialiased font-sans px-4 mt-72 lg:-mt-20">
       <HoverEffect items={projects} />
     </div>
   );

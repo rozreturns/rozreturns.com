@@ -1,5 +1,6 @@
 "use client";
 import { ContactForm } from "@/components/contact";
+import Advantages from "@/components/markets";
 import { AnimatedTestimonialsDemo } from "@/components/people";
 import { TabsDemo } from "@/components/services";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
@@ -8,7 +9,6 @@ import Image from "next/image";
 
 export default function Home() {
   const landingLines = [
-    "Redefining global trading with Intelligence & Technology",
     "Everyday",
     "Every hour",
     "Roz Returns",
@@ -30,18 +30,14 @@ export default function Home() {
           <source src="./home.mp4" type="video/mp4" />
         </video>
         <div
-          style={{
-            fontFamily: 'Copperplate, "Copperplate Gothic Light", fantasy',
-          }}
-          className="z-10 lg:w-1/2 text-center lg:text-right lg:mr-20 text-7xl text-red-100"
+          className="z-10 lg:w-1/2 text-center lg:text-right lg:mr-20"
         >
           <TextGenerateEffect
             sentences={landingLines}
-            duration={3}
+            duration={0.6}
             className="text-4xl"
           />
         </div>
-        <div className="absolute bottom-5 left-0 w-full h-44 bg-gradient-to-t from-gray-900 to-transparent z-10"></div>
       </section>
       <TracingBeam className="px-6">
         <section
@@ -49,7 +45,7 @@ export default function Home() {
           className="flex flex-col lg:flex-row items-center justify-center p-4 lg:p-8 mt-8"
         >
           <div className="flex flex-col items-center lg:items-start lg:w-1/2 p-4">
-            <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-white font-lato">
+            <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-white nova-square-regular">
               Who we are?
             </h2>
             <div
@@ -60,7 +56,7 @@ export default function Home() {
               <Image
                 width={500}
                 height={500}
-                src="./hero-img.png"
+                src="./testHero4.png"
                 className="img-fluid animated"
                 alt=""
               />
@@ -88,13 +84,14 @@ export default function Home() {
           </div>
         </section>
         <section id="services" className="p-4 lg:p-8">
-          <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-white font-lato">
+          <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-white nova-square-regular">
             How Do We Do It??
           </h2>
           <TabsDemo />
+          <Advantages />
         </section>
         <section id="team" className="p-4 lg:p-8">
-          <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-white font-lato">
+          <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-white nova-square-regular">
             Our Team
           </h2>
           <AnimatedTestimonialsDemo />
