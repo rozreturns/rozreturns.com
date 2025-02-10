@@ -51,21 +51,6 @@ export function TabsDemo() {
         </p>
       ),
     },
-    // {
-    //   name: "Consistent Returns",
-    //   src: "/markets.png",
-    //   description: (
-    //     <div className="text-left">
-    //       {/* <p className="text-xl text-white
-    //       ">Currently we work on</p> */}
-    //       {/* <ul className="mt-2 pl-3">
-    //         <li className="list-disc">Crypto (Binance, OKX)</li>
-    //         <li className="list-disc">Indian Equity and Derivatives(NSE)</li>
-    //       </ul> */}
-    //       <p></p>
-    //     </div>
-    //   ),
-    // },
   ];
 
   const tabs = tabsList.map((tab) => {
@@ -88,7 +73,7 @@ export function TabsDemo() {
   });
 
   return (
-    <div className="[perspective:1000px] align-top lg:min-h-96 relative flex max-w-5xl flex-col md:flex-row items-start md:items-center justify-start md:justify-center my-56 lg:my-20 mt-2">
+    <div className="[perspective:1000px] align-top  relative flex max-w-5xl flex-col md:flex-row items-start md:items-center justify-start md:justify-center my-72 lg:my-0  mt-0">
       <Tabs tabs={tabs} />
     </div>
   );

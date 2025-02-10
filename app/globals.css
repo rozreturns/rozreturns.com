@@ -82,17 +82,19 @@ body {
 } */
 
 .nova-square-only {
-  font-family: "Nova Square", serif;
-  font-weight: 400;
-  font-style: normal;
+  /* font-family: "Markazi Text", serif; */
+  font-family: "Hubot Sans", serif;
+  /* word-spacing: 20px; */
 }
 
 .nova-square-regular {
-  font-family: "Nova Square", serif;
+  font-family: "Markazi Text", serif;
+  font-size: 50px;
+  line-height: 1;
   font-weight: 400;
   font-style: normal;
   background: linear-gradient(
-    0deg,
+    90deg,
     rgb(76, 74, 108) 0%,
     rgb(110, 110, 203) 37%,
     rgb(133, 170, 178) 76%
@@ -104,14 +106,14 @@ body {
 }
 .nova-square-footer {
   font-size: 1.1rem;
-  font-family: "Nova Square", serif;
+  font-family: "Markazi Text", serif;
   font-weight: 400;
   font-style: normal;
   background: linear-gradient(
-    0deg,
-    rgb(199, 198, 213) 0%,
-    rgb(144, 144, 240) 37%,
-    rgb(109, 213, 236) 76%
+    90deg,
+    rgb(105, 95, 238) 0%,
+    rgb(111, 111, 255) 37%,
+    rgb(133, 170, 178) 76%
   );
   -webkit-background-clip: text;
   background-clip: text;

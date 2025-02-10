@@ -6,108 +6,6 @@ import { cn } from "@/lib/utils";
 
 export function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
-
-  // useEffect(() => {
-  //   const handleFormSubmit = (event: Event) => {
-  //     event.preventDefault(); // Prevent default form submission
-  //     setIsLoading(true); // Set loading state to true
-  //     const form = event.target as HTMLFormElement;
-  //     const formData = getFormData(form); // Get form data
-  //     const data = formData.data;
-
-  //     if (formData.honeypot) {
-  //       setIsLoading(false); // Reset loading state
-  //       return false; // If honeypot field is filled, assume it's a spam bot
-  //     }
-
-  //     disableAllButtons(form); // Disable all buttons to prevent multiple submissions
-  //     const url = form.action;
-  //     const xhr = new XMLHttpRequest();
-  //     xhr.open("POST", url);
-  //     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  //     xhr.onreadystatechange = () => {
-  //       if (xhr.readyState === 4) {
-  //         setIsLoading(false); // Reset loading state
-  //         if (xhr.status === 200) {
-  //           form.reset(); // Reset the form on successful submission
-  //           alert("Form submitted successfully! We will contact you soon.");
-  //         } else {
-  //           alert("There was an error submitting the form.");
-  //         }
-  //       }
-  //     };
-  //     const encoded = Object.keys(data)
-  //       .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
-  //       .join("&");
-  //     xhr.send(encoded); // Send the form data
-  //   };
-
-  //   const getFormData = (form: HTMLFormElement) => {
-  //     const elements = form.elements as HTMLFormControlsCollection;
-  //     let honeypot: string | undefined;
-
-  //     const fields = Array.from(elements)
-  //       .filter((element) => {
-  //         const inputElement = element as HTMLInputElement;
-  //         if (inputElement.name === "honeypot") {
-  //           honeypot = inputElement.value;
-  //           return false;
-  //         }
-  //         return true;
-  //       })
-  //       .map((element) => {
-  //         const inputElement = element as HTMLInputElement;
-  //         if (inputElement.name !== undefined) {
-  //           return inputElement.name;
-  //         } else if (inputElement.length > 0) {
-  //           return inputElement.item(0)?.name;
-  //         }
-  //       })
-  //       .filter((item, pos, self) => self.indexOf(item) === pos && item);
-
-  //     const formData: { [key: string]: string } = {};
-  //     fields.forEach((name) => {
-  //       const element = elements.namedItem(name) as HTMLInputElement;
-  //       formData[name] = element.value;
-
-  //       if (element.length) {
-  //         const data = [];
-  //         for (let i = 0; i < element.length; i++) {
-  //           const item = element.item(i);
-  //           if (item && (item.checked || item.selected)) {
-  //             data.push(item.value);
-  //           }
-  //         }
-  //         formData[name] = data.join(", ");
-  //       }
-  //     });
-
-  //     formData.formDataNameOrder = JSON.stringify(fields);
-  //     formData.formGoogleSheetName = form.dataset.sheet || "responses";
-  //     formData.formGoogleSendEmail = form.dataset.email || "";
-
-  //     return { data: formData, honeypot: honeypot };
-  //   };
-
-  //   const disableAllButtons = (form: HTMLFormElement) => {
-  //     const buttons = form.querySelectorAll("button");
-  //     buttons.forEach((button) => {
-  //       button.disabled = true;
-  //     });
-  //   };
-
-  //   const forms = document.querySelectorAll("form.gform");
-  //   forms.forEach((form) => {
-  //     form.addEventListener("submit", handleFormSubmit, false); // Attach the submit event listener
-  //   });
-
-  //   return () => {
-  //     forms.forEach((form) => {
-  //       form.removeEventListener("submit", handleFormSubmit, false); // Clean up the event listener
-  //     });
-  //   };
-  // }, []);
-
   useEffect(() => {
     const handleFormSubmit = (event: Event) => {
       event.preventDefault(); // Prevent default form submission
@@ -200,10 +98,10 @@ export function ContactForm() {
   return (
     <div
       id="contactUs"
-      className="flex flex-col lg:flex-row items-center justify-center pb-16"
+      className="flex flex-col lg:flex-row items-center justify-center pb-16 lg:mt-10"
     >
       <div className="text-center mb-8">
-        <h1 className="font-bold text-3xl justify-start w-full text-left text-gray-100 nova-square-regular">
+        <h1 className="justify-start w-full text-left nova-square-regular">
           Get in touch
         </h1>
         <p className="italic text-gray-300 mt-2 max-w-md text-left">
@@ -274,14 +172,14 @@ export function ContactForm() {
           <div className="bg-gradient-to-r from-transparent via-neutral-300 to-transparent my-8 h-[1px] w-full" />
           <div className="flex flex-col space-y-4">
             <button
-              className={`relative justify-center group/btn flex space-x-2 items-center px-4 w-full rounded-xl h-10 font-medium shadow-input bg-gray-600 text-white hover:bg-gray-500 hover:cursor-pointer transition duration-300 ${
+              className={`relative justify-center group/btn flex space-x-2 items-center px-4 w-full rounded-xl h-10 font-medium shadow-input bg-gray-800 text-white hover:bg-gray-900 hover:cursor-pointer transition duration-300 ${
                 isLoading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               type="submit"
               disabled={isLoading}
             >
               {isLoading ? (
-                <span className="loader"></span>
+                <span className="loading loading-dots loading-md"></span>
               ) : (
                 <>
                   <i className="fa fa-paper-plane"></i>&nbsp;Send

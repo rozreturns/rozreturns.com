@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-// import Link from "next/link";
-// import { useState } from "react";
+import { useState } from "react";
 
 export const HoverEffect = ({
   items,
@@ -10,38 +9,29 @@ export const HoverEffect = ({
   items: {
     title: string;
     description: string;
-    // link: string;
   }[];
   className?: string;
 }) => {
-  // let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
+        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-5 gap-8",
         className
       )}
     >
       {items.map((item, idx) => (
-        // <Link
-        //   // href={item?.link}
-        //   key={item?.link}
-        //   className="relative group  block p-2 h-full w-full"
-        // onMouseEnter={() => setHoveredIndex(idx)}
-        // onMouseLeave={() => setHoveredIndex(null)}
-        // >
         <div
           key={idx}
           className="relative group  block p-2 h-full w-full"
-          // onMouseEnter={() => setHoveredIndex(idx)}
-          // onMouseLeave={() => setHoveredIndex(null)}
+          onMouseEnter={() => setHoveredIndex(idx)}
+          onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
-            {/* {hoveredIndex === idx && ( */}
-            {
+            {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-gray-700  block  rounded-3xl"
+                className="absolute inset-0 h-full w-full  block  rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -53,7 +43,7 @@ export const HoverEffect = ({
                   transition: { duration: 0.15, delay: 0.2 },
                 }}
               />
-            }
+            )}
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
@@ -94,7 +84,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-zinc-100 text-lg font-extrabold tracking-wide mt-2", className)}>
       {children}
     </h4>
   );
@@ -109,7 +99,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-4 mb-4 text-zinc-400 tracking-wide leading-relaxed text-sm",
         className
       )}
     >

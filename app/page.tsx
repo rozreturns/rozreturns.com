@@ -1,23 +1,18 @@
 "use client";
 import { ContactForm } from "@/components/contact";
-import Advantages from "@/components/markets";
+import Advantages from "@/components/advantages";
 import { AnimatedTestimonialsDemo } from "@/components/people";
-import { TabsDemo } from "@/components/services";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { TabsDemo } from "@/components/howDoWeDoIt";
+import Typewriter from "@/components/typeWritter";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import Image from "next/image";
 
 export default function Home() {
-  const landingLines = [
-    "Everyday",
-    "Every hour",
-    "Roz Returns",
-  ];
   return (
     <div>
       <section
         id="home"
-        className="relative h-screen flex items-center justify-center lg:justify-end"
+        className="relative h-screen flex items-center justify-center"
       >
         <video
           className="h-full w-screen object-cover lg:-mt-20 absolute top-0 left-0 z-0"
@@ -29,23 +24,24 @@ export default function Home() {
         >
           <source src="./home.mp4" type="video/mp4" />
         </video>
-        <div
-          className="z-10 lg:w-1/2 text-center lg:text-right lg:mr-20"
-        >
-          <TextGenerateEffect
-            sentences={landingLines}
-            duration={0.6}
-            className="text-4xl"
-          />
+        <div className="z-10 text-center">
+          <div className="font-bold nova-square-only text-5xl lg:text-7xl p-2 -mt-24">
+            Redefining Global Trading{" "}
+            <span className="font-light">With Intelligence & Technology</span>
+          </div>
+          <Typewriter />
         </div>
       </section>
-      <TracingBeam className="px-6">
+      <TracingBeam className="px-6 -mt-24">
         <section
           id="about"
-          className="flex flex-col lg:flex-row items-center justify-center p-4 lg:p-8 mt-8"
+          className="flex flex-col lg:flex-row items-center justify-center mt-8"
         >
           <div className="flex flex-col items-center lg:items-start lg:w-1/2 p-4">
-            <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-white nova-square-regular">
+            <h2
+              className="-mt-4 text-left w-full
+             nova-square-regular"
+            >
               Who we are?
             </h2>
             <div
@@ -56,7 +52,7 @@ export default function Home() {
               <Image
                 width={500}
                 height={500}
-                src="./testHero4.png"
+                src="./aboutUs.png"
                 className="img-fluid animated"
                 alt=""
               />
@@ -83,20 +79,18 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <section id="services" className="p-4 lg:p-8">
-          <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-white nova-square-regular">
-            How Do We Do It??
-          </h2>
+        <Advantages />
+        <section id="services" className="p-4">
+          <h2 className="mt-4 nova-square-regular">How Do We Do It?</h2>
           <TabsDemo />
-          <Advantages />
         </section>
-        <section id="team" className="p-4 lg:p-8">
-          <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-white nova-square-regular">
-            Our Team
-          </h2>
+        <section id="team" className="p-4">
+          <h2 className="nova-square-regular">Our Team</h2>
           <AnimatedTestimonialsDemo />
         </section>
-        <ContactForm />
+        <section id="contact" className="p-4">
+          <ContactForm />
+        </section>
       </TracingBeam>
     </div>
   );

@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 export default function Navbar() {
   return (
-    <div className="navbar text-white font-bold bg-gray-800 sticky top-0 z-[1000] shadow-lg lg:w-3/4 lg:mx-auto lg:mt-3 lg:rounded-box ">
+    <div className="navbar text-white  bg-gray-950 sticky top-0 z-[1000] shadow-lg  lg:mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -34,7 +36,10 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl hover:bg-inherit">RozReturns</a>
+        <a className="btn btn-ghost text-xl hover:bg-inherit">
+          <Image alt="img" src="./favicon.ico" width={25} height={25} />
+          RozReturns
+        </a>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
