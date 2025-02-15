@@ -117,7 +117,7 @@ export function ContactForm() {
           className="my-8 gform"
           method="POST"
           action={
-            "https://script.google.com/macros/s/AKfycbymNDYwrrrBJkGG5MA1oOnUEOJDCSBfDQPuh_1f17h1O4CVtvBFw2bxG0bn5rvd2YVmwA/exec"
+            "https://script.google.com/macros/s/AKfycbytD7V_FBtBT0bt2yVNmMeqOvxCPIbuyxrLkNyPApUOCYBmMIyDCTAtbxaZg5IBzW9glQ/exec"
           }
         >
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
