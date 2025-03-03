@@ -7,7 +7,7 @@ export default function Footer() {
           width="200"
           height="200"
           alt="RozReturnes"
-          src="./rozReturns.png"
+          src="rozReturns.png"
         />
         <p className="footer-title pl-5 w-[200px] ">
           Roz Returns

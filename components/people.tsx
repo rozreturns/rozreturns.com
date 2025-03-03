@@ -9,16 +9,16 @@ export function AnimatedTestimonialsDemo() {
       name: "Deepankur Kansal",
       designation: "CEO – A strategist at heart and a scientist in execution",
       email: "deepankur@rozreturns.com",
-      src: "https://upload.wikimedia.org/wikipedia/commons/0/03/Jeff_Bezos_visits_LAAFB_SMC_%283908618%29_%28cropped%29.jpeg",
+      src: "deepankur.png",
     },
-    {
-      quote:
-        "Ayush is obsessed with optimizing performance at every level. From designing low latency systems to scaling cutting-edge trading infrastructure, he ensures that technology remains RozReturns’ strongest competitive advantage.",
-      name: "Ayush Kumar Gupta",
-      designation: "CTO – The architect of high-speed innovation",
-      email: "ayush@rozreturns.com",
-      src: "https://upload.wikimedia.org/wikipedia/commons/0/03/Jeff_Bezos_visits_LAAFB_SMC_%283908618%29_%28cropped%29.jpeg",
-    },
+    // {
+    //   quote:
+    //     "Ayush is obsessed with optimizing performance at every level. From designing low latency systems to scaling cutting-edge trading infrastructure, he ensures that technology remains RozReturns’ strongest competitive advantage.",
+    //   name: "Ayush Kumar Gupta",
+    //   designation: "CTO – The architect of high-speed innovation",
+    //   email: "ayush@rozreturns.com",
+    //   src: "https://upload.wikimedia.org/wikipedia/commons/0/03/Jeff_Bezos_visits_LAAFB_SMC_%283908618%29_%28cropped%29.jpeg",
+    // },
   ];
   return <AnimatedTestimonials testimonials={testimonials} />;
 }
