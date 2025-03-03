@@ -37,7 +37,7 @@ export default function Navbar() {
           </ul>
         </div>
         <a className="btn btn-ghost text-xl hover:bg-inherit">
-          <Image alt="img" src="./favicon.ico" width={25} height={25} />
+          <Image alt="img" src="favicon.ico" width={25} height={25} />
           RozReturns
         </a>
       </div>

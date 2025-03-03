@@ -25,7 +25,7 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body className="font-lato">
+      <body className="font-sans">
         <StarsBackground />
         <div className="relative z-10">
           <Navbar />

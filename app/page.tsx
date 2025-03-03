@@ -1,5 +1,5 @@
 "use client";
-import { ContactForm } from "@/components/contact";
+// import { ContactForm } from "@/components/contact";
 import Advantages from "@/components/advantages";
 import { AnimatedTestimonialsDemo } from "@/components/people";
 import { TabsDemo } from "@/components/howDoWeDoIt";
@@ -39,7 +39,7 @@ export default function Home() {
         >
           <div className="flex flex-col items-center lg:items-start lg:w-1/2 p-4">
             <h2
-              className="-mt-4 text-left w-full
+              className="mt-4 text-left w-full
              nova-square-regular"
             >
               Who we are?
@@ -52,14 +52,14 @@ export default function Home() {
               <Image
                 width={500}
                 height={500}
-                src="./aboutUs.png"
+                src="aboutUs.png"
                 className="img-fluid animated"
                 alt=""
               />
             </div>
           </div>
           <div className="lg:w-1/2 p-4">
-            <p className="lg:text-lg">
+            {/* <p className="lg:text-lg">
               <span
                 className="font-bold"
                 style={{ fontStyle: "italic", color: "white" }}
@@ -76,7 +76,42 @@ export default function Home() {
               <br />
               We’re here to revolutionize how you trade in the ever-evolving
               financial landscape.
-            </p>
+            </p> */}
+            <div className="text-left text-gray-300 lg:text-lg">
+              <p>
+                <span className="font-bold italic text-white">
+                  The firm that harnessed the data - RozReturns
+                </span>
+                is a proprietary quantitative trading firm specializing in
+                cutting-edge algorithmic strategies across global markets. We
+                identify and capitalize on market inefficiencies at an
+                unparalleled scale, leveraging our expertise in{" "}
+                <strong>
+                  data science, advanced machine learning, and finance
+                </strong>
+                .
+              </p>
+
+              <ul className="list-disc pl-5 mt-4 space-y-2">
+                <li>
+                  <strong>Seamless Execution</strong>
+                </li>
+                <li>
+                  <strong>Robust Risk Management</strong>
+                </li>
+                <li>
+                  <strong>Continuous Innovation</strong>
+                </li>
+                <li>
+                  <strong>Superior Performance</strong>
+                </li>
+              </ul>
+
+              <p className="mt-4">
+                We’re here to <strong>revolutionize trading</strong> in the
+                ever-evolving financial landscape.
+              </p>
+            </div>
           </div>
         </section>
         <Advantages />
@@ -88,9 +123,34 @@ export default function Home() {
           <h2 className="nova-square-regular">Our Team</h2>
           <AnimatedTestimonialsDemo />
         </section>
-        <section id="contact" className="p-4">
+        {/* <section id="contact" className="p-4">
           <ContactForm />
-        </section>
+          <div id="contactUs">
+            <div className="text-center mb-8">
+              <h1 className="justify-start w-full text-left nova-square-regular">
+                Get in touch
+              </h1>
+              <p className="text-gray-300 mt-2 text-left">
+                We'd love to hear from you! Whether you have questions,
+                feedback, or collaboration ideas, feel free to reach out. You
+                can contact us anytime at{" "}
+                <a
+                  href="mailto:rozreturns@gmail.com"
+                  className="text-white font-semibold"
+                >
+                  rozreturns@gmail.com
+                </a>
+                , and our team will get back to you as soon as possible.
+              </p>
+              <p className="italic text-gray-300 text-sm max-w-md text-left">
+                By reaching out, you agree to RozReturns&apos;{" "}
+                <span className="text-white font-bold">
+                  Terms &amp; Conditions and Privacy Policy.
+                </span>
+              </p>
+            </div>
+          </div>
+        </section> */}
       </TracingBeam>
     </div>
   );

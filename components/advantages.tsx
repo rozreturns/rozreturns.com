@@ -2,7 +2,7 @@ import { HoverEffect } from "./ui/card-hover-effect";
 
 export const projects = [
   {
-    title: "8 M Variables",
+    title: "8M Variables",
     description:
       "Advanced models analyze over 1.8 million variables daily for unparalleled precision.",
   },
